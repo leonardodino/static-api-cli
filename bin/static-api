@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+const {join, resolve} = require('path')
+
+const source = join(process.cwd(), process.argv[2] || '')
+const output = resolve(process.argv[3] || 'www')
+const steps = require(source)
+
+!(async compilation => (
+	await Promise.all(compilation)
+))(steps.map(api => api.compile(output)))

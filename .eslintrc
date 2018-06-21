@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+  ],
+  "env": {
+    "node": "8",
+    "es6": true
+  }
+}
